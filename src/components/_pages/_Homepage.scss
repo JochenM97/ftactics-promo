@@ -51,6 +51,10 @@
 	text-align: center;
 	position: relative;
 
+	h2 {
+	    margin-bottom: 50px;
+	}
+
 	#make-tactic-img {
 	    transform: translateX(-50%);
 	    left: 50%;
@@ -80,16 +84,13 @@
 		    justify-content: center;
 
 			.outer-circle {
-				height: 85px;
-				width: 85px;
 				border-radius: 100%;
 				display: flex;
 			    justify-content: center;
 			    align-items: center;
+			    margin-block-end: 1em;
 
 				.inner-circle {
-					height: 70px;
-    				width: 70px;
 					border-radius: 100%;
 					background-size: 50%;
 					background-repeat: no-repeat;
@@ -165,9 +166,35 @@
 	background: -o-linear-gradient(81deg, rgba(0,40,112,1) 0%, rgba(0,223,219,1) 100%);
 	background: linear-gradient(171deg, rgba(0,40,112,1) 0%, rgba(0,223,219,1) 100%);
 
+	h2 {
+	    margin-bottom: 50px;
+	}
+
 	.container {
 		box-sizing: border-box;
 		padding: 50px 25px;
+	}
+
+	.stars {
+		margin-top: 10px;
+		padding-bottom: 10px;
+		display: flex;
+		justify-content: center;
+
+		img {
+			margin: 0 2px;
+		}
+	}
+
+	.testimonial-text {
+		font-style: italic;
+		max-width: 40rem;
+    	margin: 20px auto;
+	}
+
+	.team-name {
+		font-weight: bold;
+		font-size: 1.1rem;
 	}
 }
 
@@ -207,7 +234,17 @@
 
 		.key-features-box {
 		    flex-direction: row;
-	        justify-content: space-evenly;
+	        justify-content: space-around;
+
+	        .action-icon .outer-circle {
+				height: 95px;
+				width: 95px;
+
+				.inner-circle {
+					height: 80px;
+    				width: 80px;
+				}
+	        }
 		}
 	}
 }
@@ -253,6 +290,16 @@
 
 		.key-features-box {
 		    flex-direction: column;
+
+		    .action-icon .outer-circle {
+				height: 85px;
+				width: 85px;
+
+				.inner-circle {
+					height: 70px;
+    				width: 70px;
+				}
+	        }
 		}
 	}
 }

@@ -5,6 +5,8 @@ import applicationImg from '../../assets/images/make-tactic.png';
 import searchIcon from '../../assets/images/search.svg';
 import addIcon from '../../assets/images/add-white.svg';
 import heartIcon from '../../assets/images/heart.svg';
+import losTigresLogo from '../../assets/images/los-tigres.svg';
+import star from '../../assets/images/star.svg';
 
 class Homepage extends React.Component {
 
@@ -71,7 +73,16 @@ class Homepage extends React.Component {
 	        	<section className="teams-testimonials">
 					<div className="container">
 						<h2>How do teams rate Ftactics?</h2>
-
+						<img id="los-tigres-logo" src={losTigresLogo} alt="Los Tigres football team logo" />
+						<div className="stars">
+							<img src={star} alt="Rating star" />
+							<img src={star} alt="Rating star" />
+							<img src={star} alt="Rating star" />
+							<img src={star} alt="Rating star" />
+							<img src={star} alt="Rating star" />
+						</div>
+						<p className="testimonial-text">After finishing last 3 years in a row, Ftactics helped us to step up our game and finish the season 2 places higher.</p>
+						<span className="team-name">FC Los Tigres</span>
 					</div>
 	        	</section>
 
