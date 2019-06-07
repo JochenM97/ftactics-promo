@@ -1,28 +1,45 @@
 import React from 'react';
 
 import logo from '../../assets/images/ftactics-logo.svg';
-import applicationImg from '../../assets/images/make-tactic.png';
+import makeTacticImg from '../../assets/images/make-tactic-editor.jpg';
+import homeImg from '../../assets/images/homepage.jpg';
+import findTacticImg from '../../assets/images/find-tactics.jpg';
 import searchIcon from '../../assets/images/search.svg';
 import addIcon from '../../assets/images/add-white.svg';
 import heartIcon from '../../assets/images/heart.svg';
 import losTigresLogo from '../../assets/images/los-tigres.svg';
 import star from '../../assets/images/star.svg';
+import { ReactComponent as FooterLogo } from '../../assets/images/ftactics-logo.svg';
+
+var slides;
 
 class Homepage extends React.Component {
 
     render = () => {
+    	
+
     	return (
         	<div className="homepage">
 	        	<header className="heading">
-	        		<div className="container">
-	        			<img id="logo" src={logo} alt="Ftactics logo" />
-	        			<h1>Take your Futsall tactics to the next level. For free.</h1>
-	        			<p>Ftactics let's you find the right tactics for your team, create your own style of playing or show your selected tactics easily before game time. Let us help you win more!</p>
-	        			<a className="button-link" href="https://app.ftactics.com">SIGN UP NOW</a>
+	        		<div className="logo-box">
+					    <img id="logo" src={logo} alt="Ftactics logo" />
+					</div>
+	        		<div className="container home-container">
+	        			<div>
+		        			<h1>Take your Futsall tactics to the next level. For free.</h1>
+		        			<p>Ftactics let's you find the right tactics for your team, create your own style of playing or show your selected tactics easily before game time. Let us help you win more!</p>
+		        			<a className="button-link" href="https://app.ftactics.com/register">SIGN UP NOW</a>
+		        		</div>
+		        		<div>
+		        			
+		        		</div>
 	        		</div>
 	        	</header>
 	        	<section className="features">
-					<img id="make-tactic-img" src={applicationImg} alt="Application tactic maker screen" />
+	        		<img className="make-tactic-img" src={homeImg} alt="Applicatio homepage screenshot" />
+					<img className="make-tactic-img" src={makeTacticImg} alt="Tactic editor screenshot" />
+					<img className="make-tactic-img" src={findTacticImg} alt="Find tactic screenshot" />
+
 	        		<div className="container">
 						<h2>Key features</h2>
 						<div className="key-features-box">
@@ -86,12 +103,50 @@ class Homepage extends React.Component {
 					</div>
 	        	</section>
 
-	        	<footer>
-
+	        	<footer className="footer">
+					<div className="container">
+						<FooterLogo fill="rgba(255,255,255,0.5)" alt="Ftactics logo" className="FooterLogo" />
+						<div className="footer-links">
+							<a href="https://app.ftactics.com/register">Sign up</a>
+							<a href="mailto:info@ftactics.com">Contact</a>
+						</div>
+						<span>© 2019 - Ftactics - Developed by Jochen Meyvisch</span>
+					</div>
 	        	</footer>
 			</div>
         )
     }
+
+    componentDidMount() {
+    	setInterval(() => checkMedia(), 2000);
+    	slides = document.getElementsByClassName("make-tactic-img");
+    }
 }
+
+const mq = window.matchMedia( "(max-width: 767px)" );
+
+function checkMedia() {
+	
+	if (mq.matches) {
+		showSlides();
+	}
+	else {
+		for (var i = 0; i < slides.length; i++) {
+			slides[i].style.display = "block";  
+		}
+	}
+};
+
+var slideIndex = 0;
+
+function showSlides() {
+	var i;
+	for (i = 0; i < slides.length; i++) {
+		slides[i].style.display = "none";  
+	}
+	slideIndex++;
+	if (slideIndex > slides.length) {slideIndex = 1}    
+	slides[slideIndex-1].style.display = "block";  
+};
 
 export default Homepage;

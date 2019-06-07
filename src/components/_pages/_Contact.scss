@@ -1,0 +1,25 @@
+.contact {
+	background: -webkit-linear-gradient(81deg, rgba(0,40,112,1) 0%, rgba(0,223,219,1) 100%);
+	background: -o-linear-gradient(81deg, rgba(0,40,112,1) 0%, rgba(0,223,219,1) 100%);
+	background: linear-gradient(171deg, rgba(0,40,112,1) 0%, rgba(0,223,219,1) 100%);
+}
+
+@media only screen and (min-width: 768px) {
+	.contact {
+		.heading {
+			.container {
+				padding: 0 25px 100px 25px;
+			}
+		}
+	}
+}
+
+@media only screen and (max-width: 767px) {
+	.contact {
+		.heading {
+			.container {
+				padding: 0 25px 50px 25px;
+			}
+		}
+	}
+}

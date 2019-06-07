@@ -1,135 +1,96 @@
-.heading {
-	text-align: center;
-	background: -webkit-linear-gradient(81deg, rgba(0,40,112,1) 0%, rgba(0,223,219,1) 100%);
-	background: -o-linear-gradient(81deg, rgba(0,40,112,1) 0%, rgba(0,223,219,1) 100%);
-	background: linear-gradient(171deg, rgba(0,40,112,1) 0%, rgba(0,223,219,1) 100%);
-
-	.container {
-	    box-sizing: border-box;
+.homepage {
+	.heading {
+		background: -webkit-linear-gradient(81deg, rgba(0,40,112,1) 0%, rgba(0,223,219,1) 100%);
+		background: -o-linear-gradient(81deg, rgba(0,40,112,1) 0%, rgba(0,223,219,1) 100%);
+		background: linear-gradient(171deg, rgba(0,40,112,1) 0%, rgba(0,223,219,1) 100%);
 	}
 
-	#logo {
-		user-select: none;
-	}
+	.features {
+		text-align: center;
+		position: relative;
 
-	h1 {
-		margin: 0 0 20px 0;
-	}
+		h2 {
+		  margin-bottom: 50px;
+		}
 
-	p {
-		line-height: 24px;
-	}
+		.make-tactic-img {
+			user-select: none;
+			position: absolute;
+			border: 4px solid $player-blue;
+			border-radius: 20px;
+			-webkit-box-shadow: 0px 13px 25px 0px rgba(0,0,0,0.35);
+			-moz-box-shadow: 0px 13px 25px 0px rgba(0,0,0,0.35);
+			box-shadow: 0px 13px 25px 0px rgba(0,0,0,0.35);
+		}
 
-	h1, p {
-		max-width: 40rem;
-	    margin-left: auto;
-	    margin-right: auto;
-	}
+		.container {
+			box-sizing: border-box;
+		}
 
-	.button-link {
-		color: #fff;
-		text-decoration: none;
-		display: block;
-		max-width: 400px;
-		border: 1px solid $player-blue;
-		border-radius: 40px;
-		margin: 0 auto;
+		.key-features-box {
+		  display: flex;
+		}
 
-		background: -webkit-linear-gradient(left, rgba(0,213,209,1) 0%, rgba(100,42,218,1) 100%);
-		background: -o-linear-gradient(left, rgba(0,213,209,1) 0%, rgba(100,42,218,1) 100%);
-		background: linear-gradient(to right, rgba(0,213,209,1) 0%, rgba(100,42,218,1) 100%);
-		-webkit-box-shadow: 0px 3px 6px 0px rgba(0,0,0,0.16);
-		-moz-box-shadow: 0px 3px 6px 0px rgba(0,0,0,0.16);
-		box-shadow: 0px 3px 6px 0px rgba(0,0,0,0.16);
-	}
-	.button-link:visited {
-		color: #fff;
-	}
-}
-
-.features {
-	text-align: center;
-	position: relative;
-
-	h2 {
-	    margin-bottom: 50px;
-	}
-
-	#make-tactic-img {
-	    transform: translateX(-50%);
-	    left: 50%;
-	    position: absolute;
-		border: 4px solid $player-blue;
-		border-radius: 20px;
-		-webkit-box-shadow: 0px 13px 25px 0px rgba(0,0,0,0.35);
-		-moz-box-shadow: 0px 13px 25px 0px rgba(0,0,0,0.35);
-		box-shadow: 0px 13px 25px 0px rgba(0,0,0,0.35);
-	}
-
-	.container {
-		box-sizing: border-box;
-	}
-
-	.key-features-box {
-	    display: flex;
-	}
-
-	.icon-box {
-		padding: 20px 5px;
+		.icon-box {
+			padding: 30px 20px;
+			background-color: #00163D;
+			border-radius: 20px;
+			margin-bottom: 15px;
 
 		.action-icon {
 			display: flex;
 			flex-direction: column;
-		    align-items: center;
-		    justify-content: center;
+			align-items: center;
+			justify-content: center;
 
-			.outer-circle {
+		  .outer-circle {
+		    border-radius: 100%;
+		    display: flex;
+			justify-content: center;
+			align-items: center;
+			margin-block-end: 1em;
+
+		    .inner-circle {
 				border-radius: 100%;
+				background-size: 50%;
+				background-repeat: no-repeat;
+				background-position: center;
 				display: flex;
-			    justify-content: center;
-			    align-items: center;
-			    margin-block-end: 1em;
-
-				.inner-circle {
-					border-radius: 100%;
-					background-size: 50%;
-					background-repeat: no-repeat;
-			 		background-position: center;
-			 		display: flex;
-					justify-content: center;
-					align-items: center;
-					background-color: $player-blue;
-					
-					img {
-						width: 50%;
-						height: 50%;
-					}
-				}
-			}
+				justify-content: center;
+				align-items: center;
+				background-color: $player-blue;
+		      
+		      img {
+		      	user-select: none;
+		        width: 50%;
+		        height: 50%;
+		      }
+		    }
+		  }
 		}
 		.find {
-			.outer-circle {
-				background-image: linear-gradient($player-blue, rgba(2, 214, 214, 0));
-				.inner-circle {
-					background-color: $player-blue;
-				}
-			}
+		  .outer-circle {
+		    background-image: linear-gradient($player-blue, rgba(2, 214, 214, 0));
+		    .inner-circle {
+		      background-color: $player-blue;
+		    }
+		  }
 		}
 		.make {
-			.outer-circle {
-				background-image: linear-gradient($home-purple, rgba(0, 123, 121, 0));
-				.inner-circle {
-					background-color: $home-purple;
-				}
-			}
+		  .outer-circle {
+		    background-image: linear-gradient($home-purple, rgba(0, 123, 121, 0));
+		    .inner-circle {
+		      background-color: $home-purple;
+		    }
+		  }
 		}
 		.save {
-			.outer-circle {
-				background-image: linear-gradient($delete-red, rgba(0, 123, 121, 0));
-				.inner-circle {
-					background-color: $delete-red;
-				}
-			}
+		  .outer-circle {
+		    background-image: linear-gradient($delete-red, rgba(0, 123, 121, 0));
+		    .inner-circle {
+		      background-color: $delete-red;
+		    }
+		  }
 		}
 
 		.action-text {
@@ -139,167 +100,170 @@
 		    justify-content: center;
 
 		    p {
-		    	margin: 0;
-		    	margin-block-end: 1em;
-	    	    max-width: 250px;
+		      margin: 0;
+		      margin-block-end: 1em;
+		        max-width: 250px;
 		    }
 
-			.dash {
-				display: inline-block;
-				width: 12px;
-				height: 1px;
-				background-color: #fff;
-				margin-block-start: 1em;
-				margin-block-end: 1em;
-			}
+		  .dash {
+		    display: inline-block;
+		    width: 12px;
+		    height: 1px;
+		    background-color: #fff;
+		    margin-block-start: 1em;
+		    margin-block-end: 1em;
+		  }
 		}
 
 		.action-text p:first-of-type{
-	    	margin-block-start: 1em;
-	    }
-	}
-}
-
-.teams-testimonials {
-	text-align: center;
-	background: -webkit-linear-gradient(81deg, rgba(0,40,112,1) 0%, rgba(0,223,219,1) 100%);
-	background: -o-linear-gradient(81deg, rgba(0,40,112,1) 0%, rgba(0,223,219,1) 100%);
-	background: linear-gradient(171deg, rgba(0,40,112,1) 0%, rgba(0,223,219,1) 100%);
-
-	h2 {
-	    margin-bottom: 50px;
-	}
-
-	.container {
-		box-sizing: border-box;
-		padding: 50px 25px;
-	}
-
-	.stars {
-		margin-top: 10px;
-		padding-bottom: 10px;
-		display: flex;
-		justify-content: center;
-
-		img {
-			margin: 0 2px;
+		    margin-block-start: 1em;
+		  }
 		}
 	}
 
-	.testimonial-text {
-		font-style: italic;
-		max-width: 40rem;
-    	margin: 20px auto;
-	}
+	.teams-testimonials {
+	  text-align: center;
+	  background: -webkit-linear-gradient(81deg, rgba(0,40,112,1) 0%, rgba(0,223,219,1) 100%);
+	  background: -o-linear-gradient(81deg, rgba(0,40,112,1) 0%, rgba(0,223,219,1) 100%);
+	  background: linear-gradient(171deg, rgba(0,40,112,1) 0%, rgba(0,223,219,1) 100%);
 
-	.team-name {
-		font-weight: bold;
-		font-size: 1.1rem;
+	  h2 {
+	      margin-bottom: 50px;
+	  }
+
+	  .container {
+	    box-sizing: border-box;
+	  }
+
+	  .stars {
+	    margin-top: 10px;
+	    padding-bottom: 10px;
+	    display: flex;
+	    justify-content: center;
+
+	    img {
+	      margin: 0 2px;
+	    }
+	  }
+
+	  .testimonial-text {
+	    font-style: italic;
+	    max-width: 40rem;
+	      margin: 20px auto;
+	  }
+
+	  .team-name {
+	    font-weight: bold;
+	    font-size: 1.1rem;
+	  }
 	}
 }
 
 @media only screen and (min-width: 768px) {
-	.heading {
-		h1, p {
-			text-align: center;
-		}
+	.homepage {
+		.features {
+			.make-tactic-img {
+				display: block;
+			}
+			.make-tactic-img:nth-child(1) {
+				transform: translateX(-20%);
+				left: 20%;
+				top: -136px;
+				width: 300px;
+			}
+			.make-tactic-img:nth-child(2) {
+				transform: translateX(-50%);
+				left: 50%;
+				top: -200px;
+				width: 372px;
+				z-index: 1;
+			}
+			.make-tactic-img:nth-child(3) {
+				transform: translateX(-80%);
+				left: 80%;
+				top: -136px;
+				width: 300px;
+			}
 
-		p {
-			margin-top: 30px;
-			margin-bottom: 60px;
-		}
+			.container {
+				padding: 550px 25px 64px 25px;
+			}
 
-		#logo {
-			width: 20%;
-			margin-bottom: 50px;
-			margin-top: 60px;
-		}
+			.key-features-box {
+				flex-direction: row;
+				justify-content: space-around;
 
-		.button-link {
-			padding: 15px 0;
-		}
+				.action-icon .outer-circle {
+					height: 95px;
+					width: 95px;
 
-		.container {
-			padding: 0 25px 300px 25px;
-		}
-	}
-	.features {
-		#make-tactic-img {
-			top: -200px;
-			width: 372px;
-		}
-		.container {
-			padding: 500px 25px 100px 25px;
-		}
-
-		.key-features-box {
-		    flex-direction: row;
-	        justify-content: space-around;
-
-	        .action-icon .outer-circle {
-				height: 95px;
-				width: 95px;
-
-				.inner-circle {
-					height: 80px;
-    				width: 80px;
+					.inner-circle {
+		  				height: 80px;
+	    				width: 80px;
+					}
 				}
-	        }
+			}
+		}
+		.teams-testimonials {
+			.container {
+				padding: 80px 25px;
+			}
+
+			#los-tigres-logo {
+				width: 25%;
+				height: 25%;
+			}
+
+			.stars {
+				img {
+					width: 2%;
+					height: 2%;
+				}
+			}
+
+			.testimonial-text {
+				font-size: 1.1rem;
+			}
+
+			.team-name {
+				font-size: 1.3rem;
+			}
 		}
 	}
 }
 
 @media only screen and (max-width: 767px) {
-	.heading {
-		h1 {
-			font-size: 1.5rem;
-			line-height: 33px;
+	.homepage {
+		.features {
+		    .make-tactic-img {
+				transform: translateX(-50%);
+				left: 50%;
+		      	top: -150px;
+		        max-width: 292px;
+		    }
+		    .container {
+		      	padding: 450px 25px 0px 25px;
+		    }
+
+		    .key-features-box {
+		        flex-direction: column;
+
+		        .action-icon .outer-circle {
+		        	height: 85px;
+		        	width: 85px;
+
+			        .inner-circle {
+			          	height: 70px;
+			            width: 70px;
+			        }
+		      	}
+		    }
 		}
 
-		h1, p {
-			text-align: left;
-		}
-
-		p {
-			margin-bottom: 40px;
-		}
-
-		#logo {
-			width: 30%;
-			margin-bottom: 30px;
-			margin-top: 50px;
-		}
-
-		.button-link {
-			padding: 10px 0;
-			font-size: 0.8rem;
-		}
-
-		.container {
-			padding: 0 25px 250px 25px;
-		}
-	}
-	.features {
-		#make-tactic-img {
-			top: -150px;
-		    max-width: 292px;
-		}
-		.container {
-			padding: 400px 25px 50px 25px;
-		}
-
-		.key-features-box {
-		    flex-direction: column;
-
-		    .action-icon .outer-circle {
-				height: 85px;
-				width: 85px;
-
-				.inner-circle {
-					height: 70px;
-    				width: 70px;
-				}
-	        }
-		}
+		.teams-testimonials {
+	    	.container {
+	     		padding: 30px 25px 50px 25px;
+	    	}
+	  	}
 	}
 }

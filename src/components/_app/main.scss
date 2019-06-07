@@ -1,41 +1,7 @@
-/*
-.App {
-  text-align: center;
-}
-
-.App-logo {
-  animation: App-logo-spin infinite 20s linear;
-  height: 40vmin;
-  pointer-events: none;
-}
-
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
-}
-
-.App-link {
-  color: #61dafb;
-}
-
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
-}
-*/
 @import '../_variables/Colors';
 @import '../_variables/Global';
 @import '../_pages/Homepage';
+@import '../_pages/Contact';
 
 @import "../../../node_modules/bootstrap/scss/functions";
 @import "../../../node_modules/bootstrap/scss/variables";
@@ -53,4 +19,206 @@ body {
   background-color: $background-blue;
   margin: 0;
   padding: 0;
+}
+
+.heading {
+  text-align: center;
+
+  .home-container {
+    display: flex;
+  }
+
+  .container {
+      box-sizing: border-box;
+  }
+
+  .logo-box {
+    width: 30%;
+    max-width: 200px;
+    height: 50px;
+    min-height: 50px;
+    margin: 0 auto 50px;
+
+    #logo {
+      height: 100%;
+      -moz-box-sizing: border-box;
+      box-sizing: border-box;
+    }
+  }
+
+  h1 {
+    margin: 0 0 20px 0;
+  }
+
+  p {
+    line-height: 24px;
+  }
+
+  h1, p {
+    max-width: 40rem;
+      margin-left: auto;
+      margin-right: auto;
+  }
+
+  .button-link {
+    color: #fff;
+    text-decoration: none;
+    display: block;
+    max-width: 400px;
+    border: 1px solid $player-blue;
+    border-radius: 40px;
+    margin: 0 auto;
+    -webkit-transition: background 0.5s ease-out;  
+    -moz-transition: background 0.5s ease-out;  
+    -o-transition: background 0.5s ease-out;  
+    transition: all 0.5s ease-out;  
+
+    background: -webkit-linear-gradient(left, rgba(0,213,209,1) 0%, rgba(100,42,218,1) 51%, rgba(0,213,209,1) 100%);
+    background: -o-linear-gradient(left, rgba(0,213,209,1) 0%, rgba(100,42,218,1) 51%, rgba(0,213,209,1) 100%);
+    background-image: linear-gradient(to right, rgba(0,213,209,1) 0%, rgba(100,42,218,1) 51%, rgba(0,213,209,1) 100%);
+    background-size: 200% auto;
+
+    -webkit-box-shadow: 0px 3px 6px 0px rgba(0,0,0,0.16);
+    -moz-box-shadow: 0px 3px 6px 0px rgba(0,0,0,0.16);
+    box-shadow: 0px 3px 6px 0px rgba(0,0,0,0.16);
+    background-position: 0% 0%;
+  }
+  .button-link:hover {
+    background-position: right center;
+    border-color: rgba(0,226,222,0.4);
+  }
+  .button-link:visited {
+    color: #fff;
+  }
+}
+
+.footer {
+  background-color: $background-blue;
+  color: rgba(255,255,255,0.5);
+  text-align: center;
+
+  .container {
+    box-sizing: border-box;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+  }
+
+  .footer-links {
+    margin: 30px 0;
+    display: flex;
+
+    a {
+      text-decoration: none;
+      color: rgba(255,255,255,0.5);
+      padding: 9px 18px;
+      border: 1px solid rgba(255,255,255,0.5);
+      border-radius: 20px;
+      margin: 0 10px;
+      transition: all 0.2s linear;
+    }
+
+    a:hover {
+      background-color: rgba(255,255,255,0.9);
+      color: $background-blue;
+      border-color: rgba(255,255,255,0.9);
+    }
+  }
+
+  .home-link {
+    width: 100%;
+  }
+
+  .FooterLogo {
+    user-select: none;
+  }
+
+  span {
+    margin-top: 15px;
+  }
+}
+
+@media only screen and (min-width: 768px) {
+  .logo-box {
+    padding-top: 20px;
+  }
+  .heading {
+    h1, p {
+      text-align: center;
+    }
+
+    p {
+      margin-top: 30px;
+      margin-bottom: 60px;
+    }
+    /*
+    #logo {
+      width: 20%;
+      margin-bottom: 50px;
+      margin-top: 60px;
+    }
+    */
+
+    .button-link {
+      padding: 15px 0;
+    }
+
+    .home-container {
+      padding: 0 25px 300px 25px;
+    }
+  }
+
+  .footer {
+    .container {
+      padding: 100px 25px;
+    }
+
+    .FooterLogo {
+      width: 15%;
+    }
+  }
+}
+
+@media only screen and (max-width: 767px) {
+  .heading {
+    h1 {
+      font-size: 1.5rem;
+      line-height: 33px;
+    }
+
+    h1, p {
+      text-align: left;
+    }
+
+    p {
+      margin-bottom: 40px;
+    }
+    /*
+    #logo {
+      width: 30%;
+      margin-bottom: 30px;
+      margin-top: 50px;
+    }
+    */
+
+    .button-link {
+      padding: 10px 0;
+      font-size: 0.8rem;
+    }
+
+    .home-container {
+      padding: 0 25px 250px 25px;
+    }
+  }
+
+  .footer {
+    .container {
+      padding: 50px 25px;
+    }
+
+    .FooterLogo {
+      width: 30%;
+    }
+  }
 }
