@@ -26,6 +26,12 @@ body {
 
   .home-container {
     display: flex;
+
+    div {
+      .field-design-img {
+        width: 100%;
+      }
+    }
   }
 
   .container {
@@ -33,14 +39,14 @@ body {
   }
 
   .logo-box {
-    width: 30%;
     max-width: 200px;
-    height: 50px;
+    height: 150px;
     min-height: 50px;
-    margin: 0 auto 50px;
+    margin: 0 auto;
+    display: flex;
 
     #logo {
-      height: 100%;
+      width: 100%;
       -moz-box-sizing: border-box;
       box-sizing: border-box;
     }
@@ -67,7 +73,6 @@ body {
     max-width: 400px;
     border: 1px solid $player-blue;
     border-radius: 40px;
-    margin: 0 auto;
     -webkit-transition: background 0.5s ease-out;  
     -moz-transition: background 0.5s ease-out;  
     -o-transition: background 0.5s ease-out;  
@@ -141,24 +146,17 @@ body {
 
 @media only screen and (min-width: 768px) {
   .logo-box {
-    padding-top: 20px;
+    //width: 30%;
   }
   .heading {
     h1, p {
-      text-align: center;
+      text-align: left;
     }
 
     p {
       margin-top: 30px;
       margin-bottom: 60px;
     }
-    /*
-    #logo {
-      width: 20%;
-      margin-bottom: 50px;
-      margin-top: 60px;
-    }
-    */
 
     .button-link {
       padding: 15px 0;
@@ -166,6 +164,19 @@ body {
 
     .home-container {
       padding: 0 25px 300px 25px;
+      flex-direction: row;
+
+      .header-text {
+        padding-right: 40px;
+        box-sizing: border-box;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+      }
+
+      div {
+        width: 50%;
+      }
     }
   }
 
@@ -194,21 +205,24 @@ body {
     p {
       margin-bottom: 40px;
     }
-    /*
-    #logo {
-      width: 30%;
-      margin-bottom: 30px;
-      margin-top: 50px;
-    }
-    */
 
     .button-link {
       padding: 10px 0;
       font-size: 0.8rem;
+      margin: 0 auto;
     }
 
     .home-container {
       padding: 0 25px 250px 25px;
+      flex-direction: column;
+
+      .header-text {
+        margin-bottom: 50px;
+      }
+
+      div {
+        width: 100%;
+      }
     }
   }
 

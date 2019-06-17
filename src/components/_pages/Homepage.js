@@ -10,6 +10,7 @@ import heartIcon from '../../assets/images/heart.svg';
 import losTigresLogo from '../../assets/images/los-tigres.svg';
 import star from '../../assets/images/star.svg';
 import { ReactComponent as FooterLogo } from '../../assets/images/ftactics-logo.svg';
+import fieldDesign from '../../assets/images/field-design.png';
 
 var slides;
 
@@ -25,13 +26,13 @@ class Homepage extends React.Component {
 					    <img id="logo" src={logo} alt="Ftactics logo" />
 					</div>
 	        		<div className="container home-container">
-	        			<div>
+	        			<div className="header-text">
 		        			<h1>Take your Futsall tactics to the next level. For free.</h1>
 		        			<p>Ftactics let's you find the right tactics for your team, create your own style of playing or show your selected tactics easily before game time. Let us help you win more!</p>
 		        			<a className="button-link" href="https://app.ftactics.com/register">SIGN UP NOW</a>
 		        		</div>
 		        		<div>
-		        			
+		        			<img src={fieldDesign} alt="Field on smartphone illustration" className="field-design-img" />
 		        		</div>
 	        		</div>
 	        	</header>
